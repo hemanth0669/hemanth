@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-neon-cyan: #22d3ee;
+  --color-neon-magenta: #f472b6;
+  --color-dark-surface: #020617;
+  --color-dark-elevated: #0f172a;
+}
+
+@layer base {
+  body {
+    @apply bg-dark-surface text-slate-50 antialiased overflow-hidden;
+  }
+}
+
+.neon-cyan {
+  color: var(--color-neon-cyan);
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.5), 0 0 20px rgba(34, 211, 238, 0.3);
+}
+
+.neon-magenta {
+  color: var(--color-neon-magenta);
+  text-shadow: 0 0 10px rgba(244, 114, 182, 0.5);
+}
+
+.border-neon-cyan {
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+}
+
+.bg-glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+}
+
+.snake-grid {
+  background-image: radial-gradient(rgba(34, 211, 238, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.music-active {
+  border-left: 4px solid var(--color-neon-cyan);
+  background: rgba(34, 211, 238, 0.05);
+}
